@@ -1,0 +1,22 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql+pymysql://root:@localhost/techpra",
+    "prod_uri": "mysql+pymysql://root:@localhost/techpra",
+    "fb_url": "https://facebook.com",
+    "tw_url": "https://twitter.com",
+    "gh_url": "https://github.in",
+    "LI": "https://linkedin.com",
+    "yt_url": "https://Youtube.com",
+    "insta_url": "https://instagram.com",
+    "gmail-user": "jugnukumarsah77@gmail.com",
+    "gmail-password": "pra805141@",
+    "no_of_posts": 6,
+    "blog_name": "Techpra.xyz",
+    "login_image": "login.jpg",
+    "admin_user": "techpra",
+    "admin_password": "pra805141@",
+    "upload_location": "C:\\Users\\PRIYANSHURAJ ANAND\\PycharmProjects\\priyanshurajanand\\static"
+  }
+}

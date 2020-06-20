@@ -1,0 +1,142 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+     <meta name="keywords" content="Priyanshu Raj Anand, techpra.xyz, techpra, PRA, Learn Hacking, Web Development, Learn Programming, C++, Bootstrap, HTML, CSS, Penetration Testing," >
+        <meta name="description" content="Priyanshu Raj Anand, Techpra.xyz" >
+        <met
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+     <meta name="keywords" content="Priyanshu Raj Anand, techpra.xyz, techpra, PRA, Learn Hacking, Web Development, Learn Programming, C++, Bootstrap, HTML, CSS, Penetration Testing," >
+        <meta name="description" content="Priyanshu Raj Anand, Techpra.xyz" >
+        <meta name="classification" content="Priyanshu Raj Anand, Techpra.xyz" >
+       
+     
+
+       
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+       	<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+       
+        <script>
+$(document).ready(function() {
+    $("#news-slider").owlCarousel({
+        items : 3,
+        itemsDesktop:[1199,2],
+        itemsDesktopSmall:[980,2],
+        itemsMobile: [600, 1],
+        navigation : false,
+        pagination:false,
+        autoPlay : true
+    });
+});
+	</script>
+    
+       
+       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Blogs</title>
+  
+  </head>
+  <body>
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="{{ url_for('static', filename='3.jpg') }}" alt="logo" width="35">
+  <a class="navbar-brand" href="/">&nbsp;Techpra</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/"><i class="fa fa-fw fa-home"></i>Home </a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/contact"><i class="fa fa-fw fa-envelope"></i>Contact Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/webworks"><i class="fa fa-globe"></i>My Web Works</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/blogs">Blogs<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <a href="{{params['fb_url']}}" class="facebook" target="_blank"><i class="fa fa-facebook"></i>&nbsp;</a>
+  <a href="{{params['tw_url']}}" class="twitter" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a>
+  <a href="{{params['gh_url']}}" class="github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
+  <a href="{{params['LI_url']}}" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;</a>
+  <a href="{{params['yt_url']}}" class="youtube" target="_blank"><i class="fa fa-youtube"></i>&nbsp;</a>
+  <a href="{{params['insta_url']}}" class="instagram" target="_blank"><i class="fa fa-instagram"></i>&nbsp;</a>
+  
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-fw fa-search"></i>Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+ 
+
+                    
+                     {% for post in posts %}
+                    {% set fname = post.img_file %}
+                   	<section class="wrapper style1">
+						<div class="inner">
+							<!-- 2 Columns -->
+								<div class="flex flex-2">
+									<div class="col col1">
+										<div class="image round fit">
+											<a href="/blogs" class="link"><img src="{{url_for('static', filename=fname)}}" alt="/" ></a>
+										</div>
+									</div>
+									<div class="col col2">
+									<a href="/learn/{{post.slug}}">	<h3>{{post.title}}</h3></a>
+										<p>{{post.content_intro}}</p>
+										<a href="/learn/{{post.slug}}" class="button">Learn More</a>
+									</div>
+								</div>
+						</div>
+					</section>
+                       {% endfor %}
+                
+                    
+         
+   
+<div class="clearfix">
+ <a class="btn btn-primary float-left" href="{{prev}}"> &larr; Previous</a>
+          <a class="btn btn-primary float-right" href="{{next}}">Next &rarr;</a>
+        </div>
+<hr>
+<footer class="container mt-3">
+    <p class="float-right">
+    <a href="{{params['gh_url']}}" class="github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
+  <a href="{{params['LI_url']}}" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;</a>
+    <a href="{{params['insta_url']}}" class="instagram" target="_blank"><i class="fa fa-instagram"></i>&nbsp;</a>
+    <a href="#">&nbsp;&nbsp;&nbsp;Back to top</a></p>
+    <p>&copy; 2020-2021 Techpra.xyz &middot; <a href="/privacy-policy">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="/contact">Contact</a>   
+ 
+
+  </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
